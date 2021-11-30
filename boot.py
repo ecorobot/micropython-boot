@@ -18,7 +18,7 @@ def connect_to_wifi():
     try:
         import wifi_client_cfg as wifi
     except Exception:
-        r_pwd_led = PWM(Pin(BLINK_GPIO_B), 50, 10)
+        r_pwd_led = PWM(Pin(BLINK_GPIO_R), 50, 10)
         print("No wifi_client_cfg found, wifi_client_cfg.py文件是否存在。")
     wlan = network.WLAN(network.STA_IF) # create station interface
     if not wlan.isconnected():
